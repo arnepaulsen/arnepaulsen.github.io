@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Bauer Home Topology
-date: 2023-04-01 12:00:00 -700
+date: 2023-04-04 10:00:00 -700
 categories: topology, streaming
 tags: hardware, software, networking
 ---
@@ -11,8 +11,8 @@ Documentation of the Bauer home hardware, software and networking topologies.
 
 # Physical Systems
 
-* [Windows 11]({% post_url 2023-04-04-Windows11 %})
-* Fedora 37
+* [Windows 11]({% post_url 2023-04-02-Windows11 %})
+* [Fedora  37]({% post_url 2023-04-02-Fedora-Desktop %})
 * Red Hat 8.7 
 * Dell PowerEdge - VMWare
 * HP Proliant - Proxmox
@@ -27,7 +27,7 @@ Documentation of the Bauer home hardware, software and networking topologies.
 
 # Networking
 
-* Procectli
+* Procectli 4-Port
 * Engenius WiFi Garage
 * Engenius WiFi Family Room
 * Engenius WiFi Bedrooms
@@ -38,8 +38,9 @@ Documentation of the Bauer home hardware, software and networking topologies.
 
 # Web Hosts
 
-* Linode Apache2 Container
-* Fedora Apache2
+* Linode Docker/Apache2
+* Fedora Podman/Apache2
+* Red Hat Podman/Apache2
 * GitHub Pages
 
 # Web Sites
@@ -57,3 +58,18 @@ Documentation of the Bauer home hardware, software and networking topologies.
 * SmartThings
 * Philips Hue
 * Google Home
+
+# How to Publish
+
+* 1. export gitmsg="some message"
+* 2. then do:
+
+```bash
+
+cd ~/Projects/arnepaulsen.github.io 
+git status
+git add .
+git status
+git commit -m "feat(post): $gitmsg"
+git push
+```
